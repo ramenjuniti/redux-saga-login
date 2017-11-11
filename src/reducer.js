@@ -5,6 +5,10 @@ export const AUTH_REQUEST = 'AUTH_REQUEST';
 export const AUTH_SUCCESS = 'AUTH_SUCCESS';
 export const AUTH_FAILURE = 'AUTH_FAILURE';
 
+export const logout = () => ({
+  token: localStorage.removeItem('token')
+});
+
 export const unauthorize = () => ({
   type: AUTH_REQUEST,
   payload: {}
